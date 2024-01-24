@@ -9,7 +9,7 @@ int smPos(int goal){
         }
        
     }
-    return i-1;
+    return i;
 }
 int main()
 {
