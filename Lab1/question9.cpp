@@ -2,14 +2,8 @@
 using namespace std;
 int main()
 {
-    int a,b;
-    cin>>a;
-    cin>>b;
-    int sum=0;
-    for(int i=a ;i<=b;i++)
-    {
-        sum = sum +i;
-    }
-    cout<<sum;
+    int arr[5]={1,2,3,4,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    cout<<n<<endl;
  return 0;
 }

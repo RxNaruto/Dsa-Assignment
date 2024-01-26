@@ -1,3 +1,4 @@
+
 #include<iostream>
 using namespace std;
 int smPos(int goal){
@@ -9,7 +10,7 @@ int smPos(int goal){
         }
        
     }
-    return i;
+    return i-1;
 }
 int main()
 {
