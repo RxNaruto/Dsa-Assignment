@@ -1,4 +1,4 @@
-
+// not correct
 #include<iostream>
 using namespace std;
 int smPos(int goal){

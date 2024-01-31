@@ -1,15 +1,27 @@
 #include<iostream>
+ 
 using namespace std;
+ 
+// Function to calculate the 
+// product of array using recursion
+int multiply(int a[], int n)
+{
+    // Termination condition
+    if (n == 0)
+        return(a[n]);
+    else
+        return (a[n] * multiply(a, n - 1));
+}
+ 
+// Driver Code
 int main()
 {
-    int arr1[2][2]={{1,2},{2,4}};
-    int arr2[2][2]={{2,3},{1,4}};
-    int arr3[2][2];
-    int k=0;
-    for(int i=0;i<2;i++){
-        for(int j=0;j<2;j++){
-            arr3[i][j]=arr1[i][j]*arr2[j][k]+arr1[]
-        }
-    }
- return 0;
+    int array[] = {1, 2, 3, 4, 5, 6};
+    int n = sizeof(array) / sizeof(array[0]);
+ 
+    // Function call to 
+    // calculate the product
+    cout << multiply(array, n - 1) 
+         << endl;
+    return 0;
 }
