@@ -1,22 +1,26 @@
-// not correct
 #include<iostream>
 using namespace std;
-int smPos(int goal){
-    int count=0,i=1;
-    while(count<goal){
-        count=count+i;
-        if(count<=goal){
-            i++;
-        }
-       
+int smallestPN(int goal){
+    int sum = 0;
+    int i=0;
+    while(sum<goal){
+        sum=sum+i;
+    if(sum>=goal){
+        return i;
     }
-    return i-1;
+    else{
+        i++;
+    }
+
+    }
+    
 }
 int main()
 {
     int goal;
     cout<<"Enter the goal"<<endl;
     cin>>goal;
-    cout<<"The smallest positive integer is "<<smPos(goal);
+    cout<<"The smallest postive number is"<<smallestPN(goal)<<endl;
+
  return 0;
 }

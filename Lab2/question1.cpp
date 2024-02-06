@@ -26,6 +26,41 @@ void insertElement(int arr[],int index,int num,int size){
     arr[index]=num;
 }
 
+void deleteElement(int arr[],int size,int element){
+    int elementToDelete=0;
+    for(int i=0;i<size;i++){
+        if(arr[i]==element){
+            elementToDelete=i;
+
+            
+        }
+        for(int i=elementToDelete;i<size;i++){
+            arr[i]=arr[i+1];
+        }
+    }
+}
+
+int linearSearch(int arr[],int size, int element){
+    for(int i=0;i<size;i++){
+        if(arr[i]==element){
+            return i;
+        }
+        else{
+            return -1;
+        }
+    }
+}
+
+int binarysearch(int arr[],int size,int element){
+    int s=0;
+    int e=size-1;
+    int mid;
+    while(mid=(s+e)/2){
+        
+    }
+
+}
+
 
 int main()
 {
