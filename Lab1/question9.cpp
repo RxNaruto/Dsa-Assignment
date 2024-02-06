@@ -23,7 +23,7 @@ int main(){
     int arr[7]={1,2,0,1,3,1,2};
     int size=7;
     removingDuplicates(arr,size);
-    for(int i=0; i<size;i++){
+    for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
 
