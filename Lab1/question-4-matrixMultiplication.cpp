@@ -1,27 +1,38 @@
 #include<iostream>
- 
 using namespace std;
- 
-// Function to calculate the 
-// product of array using recursion
-int multiply(int a[], int n)
-{
-    // Termination condition
-    if (n == 0)
-        return(a[n]);
-    else
-        return (a[n] * multiply(a, n - 1));
-}
- 
-// Driver Code
 int main()
 {
-    int array[] = {1, 2, 3, 4, 5, 6};
-    int n = sizeof(array) / sizeof(array[0]);
- 
-    // Function call to 
-    // calculate the product
-    cout << multiply(array, n - 1) 
-         << endl;
-    return 0;
+     int arr1[10][10];
+    cout<<"Enter the elements of first array"<<endl;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout<<"row "<<i+1<<" column "<<j+1<<endl;
+            cin>>arr1[i][j];
+        }
+    }
+   
+    int arr2[10][10];
+     cout<<"Enter the elements of second array"<<endl;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout<<"row "<<i+1<<" column "<<j+1<<endl;
+            cin>>arr2[i][j];
+        }
+    }
+    int arr3[10][10]={0};
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            for(int k=0;k<10;k++){
+                arr3[i][j]+=arr1[i][k]*arr2[k][j];
+            }
+        }
+    }
+    cout<<"The element of third array are"<<endl;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout<<arr3[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+ return 0;
 }
