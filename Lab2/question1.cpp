@@ -121,8 +121,7 @@ void rotate(int arr[],int size){
 int main()
 {
     int arr[5]={1,2,4,5,6};
-    shift(arr,5);
-    display(arr,5);
+    
     
 
     
