@@ -50,6 +50,32 @@ int keyElement(node* head,int key){
     return -1;
 }
 
+void toDelete(node* &head,int key){
+    node* current=head;
+    
+    while(current->next->data!=key){
+        current=current->next;
+    }
+    node* toDelete = current->next;
+    current->next=toDelete->next;
+    delete toDelete;
+
+
+}
+
+bool checkLLSorted(node* head){
+    node* current =head;
+    while(current->next!=nullptr){
+        if(current->data>current->next->data){
+            return false;
+        }
+        else{
+            current=current->next;
+        }
+
+    }
+    return true;
+}
 
 int main()
 {
@@ -61,11 +87,11 @@ int main()
     head->next=second;
     second->next=third;
     third->next=tail;
+ 
+    cout<<"The linked list is"<<checkLLSorted(head);
 
-
-    display(head);
-    countSum(head);
-    cout<<"The key element 3 is present at"<<keyElement(head,3);
+   
+    
 
  return 0;
 }
