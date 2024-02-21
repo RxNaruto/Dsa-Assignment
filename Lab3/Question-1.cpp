@@ -99,6 +99,24 @@ bool palindrome(string s){
     return true;
 
 }
+void findDuplicate(string s){
+    int i=0;
+    int length=lengthOfString(s);
+    while(s[i]!=0){
+        for(int j=1;j<length;j++){
+            if(s[i]=='0'){
+                continue;
+            }
+            if(s[i]==s[j]){
+                cout<<s[i]<<" ";
+                s[j]='0';
+            }
+
+        }
+        s[i]='0';
+        i++;
+    }
+}
 int main()
 {
     string s;
@@ -115,7 +133,8 @@ int main()
     // cout<<"The string only contain alphabet "<<onlyContainAlphabet(s);
     // reverseString(s);
     // cout<<s;
-    cout<<"The string is palindrom"<<palindrome(s);
+    // cout<<"The string is palindrom"<<palindrome(s);
+    findDuplicate(s);
 
 
     
