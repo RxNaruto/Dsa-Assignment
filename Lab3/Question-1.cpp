@@ -99,22 +99,23 @@ bool palindrome(string s){
     return true;
 
 }
-void findDuplicate(string s){
-    int i=0;
-    int length=lengthOfString(s);
-    while(s[i]!=0){
-        for(int j=1;j<length;j++){
-            if(s[i]=='0'){
+void duplicates(string s){
+  
+    int l=lengthOfString(s);
+    for(int i=0;i<l-1;i++){
+        for(int j=i+1;j<l;j++){
+            if(s[j]=='0'){
                 continue;
             }
+            
             if(s[i]==s[j]){
-                cout<<s[i]<<" ";
+                cout<<s[i];
                 s[j]='0';
+                break;
+                
+                
             }
-
         }
-        s[i]='0';
-        i++;
     }
 }
 int main()
@@ -134,7 +135,7 @@ int main()
     // reverseString(s);
     // cout<<s;
     // cout<<"The string is palindrom"<<palindrome(s);
-    findDuplicate(s);
+    duplicates(s);
 
 
     
