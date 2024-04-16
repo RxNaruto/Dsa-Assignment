@@ -1,45 +1,69 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class node{
-    public:
+class Node {
+public:
     int data;
-    node* next;
-
-    node(int val){
-        data=val;
-        next=nullptr;
+    Node* next;
+    Node(int val) : data(val), next(nullptr) {}
+};
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList() : head(nullptr) {}
+    void insert(int val) {
+        Node* newNode = new Node(val);
+        if (!head) {
+            head = newNode;
+        } else {
+            Node* temp = head;
+            while (temp->next) {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+        }
+    }
+    void printList() {
+        Node* temp = head;
+        while (temp != nullptr) {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+    Node* mergeSortedLists(Node* list1, Node* list2) {
+        if (list1 == nullptr) return list2;
+        if (list2 == nullptr) return list1;
+        Node* merged = nullptr;
+        if (list1->data <= list2->data) {
+            merged = list1;
+            merged->next = mergeSortedLists(list1->next, list2);
+        } else {
+            merged = list2;
+            merged->next = mergeSortedLists(list1, list2->next);
+        }
+        return merged;
+    }
+    void mergeWith(LinkedList& otherList) {
+        head = mergeSortedLists(head, otherList.head);
+        otherList.head = nullptr;  
     }
 };
-
-void mergingLL(node* head1,node* head2){
-    node* ptr1=head1;
-    node* ptr2=head2;
-    node* dummynode = new node(-1);
-    node* ptr3=dummynode;
-    while(ptr1!=nullptr && ptr2!=nullptr){
-        ptr3->next=ptr1;
-        ptr1=ptr1->next;
-        ptr3=ptr3->next;
-        ptr3->next=ptr2;
-        ptr2=ptr2->next;
-
-
-    }
-}
-int main()
-{
-    node* n1=new node(1);
-    node* n2=new node(3);
-    node* n3=new node(5);
-    node* n4=new node(7);
-    node* n5=new node(9);
-
-    node* p1=new node(2);
-    node* p2=new node(4);
-    node* p3=new node(6);
-    node* p4=new node(8);
-
-
-
- return 0;
+int main() {
+    LinkedList list1;
+    list1.insert(1);
+    list1.insert(3);
+    list1.insert(5);
+    LinkedList list2;
+    list2.insert(2);
+    list2.insert(4);
+    list2.insert(6);
+    cout << "List 1: ";
+    list1.printList();
+    cout << "List 2: ";
+    list2.printList();
+    list1.mergeWith(list2);
+    cout << "Merged List: ";
+    list1.printList();
+    return 0;
 }

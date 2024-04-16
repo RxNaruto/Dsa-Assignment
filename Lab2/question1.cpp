@@ -12,6 +12,14 @@ void insert(int arr[],int index,int size,int num){
     arr[index]=num;
 }
 
+void append(int arr[],int x){
+    int i=0;
+    while(arr[i]!=0){
+        i++;
+    }
+    arr[i]=x;
+
+}
 void deletenum(int arr[],int size,int x){
     int index=0;
     for(int i=0;i<size;i++){
@@ -120,16 +128,12 @@ void rotate(int arr[],int size){
  
 int main()
 {
-    int arr[5]={1,2,4,5,6};
-    
-    
+    int arr[6]={1,2,4,5,6};
+    display(arr,6);
+    cout<<endl;
+    append(arr,100);
+    display(arr,6);
 
-    
-  
-   
-  
-    
-   
-    
+
  return 0;
 }

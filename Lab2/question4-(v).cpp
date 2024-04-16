@@ -20,7 +20,6 @@ bool checkLLSorted(node* head){
         else{
             current=current->next;
         }
-
     }
     return true;
 }
