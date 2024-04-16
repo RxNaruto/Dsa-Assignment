@@ -123,18 +123,20 @@ int main()
     string s;
     cout<<"Enter the string"<<endl;
     cin>>s;
-    //cout<<"The length of string is "<<lengthOfString(s);
+    // cout<<"The length of string is "<<lengthOfString(s);
     // stringToLowerCase(s);
-    // cout<<s;
-    // int length=lengthOfString(s);
+    //  cout<<s;
+    //  int length=lengthOfString(s);
+    
     // int vowels=NumberOfVowels(s);
+    // cout<<"no of vowels are "<<vowels;
     // int words=length-vowels;
 
     // cout<<"The number of vowels in a string are "<<vowels<<" words are "<< words;
-    // cout<<"The string only contain alphabet "<<onlyContainAlphabet(s);
-    // reverseString(s);
-    // cout<<s;
-    // cout<<"The string is palindrom"<<palindrome(s);
+    //  cout<<"The string only contain alphabet "<<onlyContainAlphabet(s);
+    //   reverseString(s);
+    //   cout<<s;
+    // cout<<"The string is palindrom "<<palindrome(s);
     duplicates(s);
 
 

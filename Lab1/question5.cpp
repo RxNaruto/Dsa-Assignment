@@ -28,8 +28,6 @@ void englishName(){
         case 9:
             cout<<"Nine"<<endl;
             break;
-        
-      
         }
     }
 }

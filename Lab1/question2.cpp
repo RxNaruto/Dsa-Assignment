@@ -11,9 +11,7 @@ int smallestPN(int goal){
     else{
         i++;
     }
-
-    }
-    
+    } 
 }
 int main()
 {
@@ -21,6 +19,5 @@ int main()
     cout<<"Enter the goal"<<endl;
     cin>>goal;
     cout<<"The smallest postive number is"<<smallestPN(goal)<<endl;
-
  return 0;
 }

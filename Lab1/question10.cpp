@@ -17,7 +17,7 @@ int main()
         arr3[n1+i]=arr2[i];
     }
     for(int i=0;i<n;i++){
-        cout<<arr3[i];
+        cout<<arr3[i]<<" ";
     }
  return 0;
 }

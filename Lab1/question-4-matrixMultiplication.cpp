@@ -27,6 +27,20 @@ int main()
             }
         }
     }
+    cout<<"the array 1 is "<<endl;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout<<arr1[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    cout<<"the array 2 is "<<endl;
+    for(int i=0;i<10;i++){
+        for(int j=0;j<10;j++){
+            cout<<arr2[i][j]<<" ";
+        }
+        cout<<endl;
+    }
     cout<<"The element of third array are"<<endl;
     for(int i=0;i<10;i++){
         for(int j=0;j<10;j++){

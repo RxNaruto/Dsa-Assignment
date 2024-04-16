@@ -3,6 +3,6 @@ triple:          'arm64-apple-darwin'
 binary-path:     '/Users/rithkchaudhary/Documents/Dsa Assignment/Lab1/output/question8'
 relocations:
   - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z9movearrayPii, symObjAddr: 0x0, symBinAddr: 0x100003E2C, symSize: 0x88 }
-  - { offsetInCU: 0x2C66, offset: 0x2C66, size: 0x8, addend: 0x0, symName: __Z9movearrayPii, symObjAddr: 0x0, symBinAddr: 0x100003E2C, symSize: 0x88 }
-  - { offsetInCU: 0x2CC6, offset: 0x2CC6, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x88, symBinAddr: 0x100003EB4, symSize: 0xC0 }
+  - { offsetInCU: 0x2DCB, offset: 0x2DCB, size: 0x8, addend: 0x0, symName: __Z9movearrayPii, symObjAddr: 0x0, symBinAddr: 0x100003E2C, symSize: 0x88 }
+  - { offsetInCU: 0x2E2B, offset: 0x2E2B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x88, symBinAddr: 0x100003EB4, symSize: 0xC0 }
 ...

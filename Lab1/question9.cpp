@@ -18,7 +18,6 @@ void removingDuplicates(int arr[],int& size){
         }
     }
 }
-
 int main(){
     int arr[7]={1,2,0,1,3,1,2};
     int size=7;
