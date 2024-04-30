@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rithkchaudhary/Documents/Dsa Assignment/Lab6/output/CountSort'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z9countsortPii, symObjAddr: 0x0, symBinAddr: 0x100003BB8, symSize: 0x278 }
+  - { offsetInCU: 0xB21, offset: 0xB21, size: 0x8, addend: 0x0, symName: __ZNSt3__13maxB8ue170006IiEERKT_S3_S3_, symObjAddr: 0x278, symBinAddr: 0x100003E30, symSize: 0x2C }
+  - { offsetInCU: 0xB64, offset: 0xB64, size: 0x8, addend: 0x0, symName: __ZNSt3__13maxB8ue170006IiNS_6__lessIvvEEEERKT_S5_S5_T0_, symObjAddr: 0x324, symBinAddr: 0x100003EDC, symSize: 0x54 }
+  - { offsetInCU: 0x2EAD, offset: 0x2EAD, size: 0x8, addend: 0x0, symName: __Z9countsortPii, symObjAddr: 0x0, symBinAddr: 0x100003BB8, symSize: 0x278 }
+  - { offsetInCU: 0x2FAC, offset: 0x2FAC, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x2A4, symBinAddr: 0x100003E5C, symSize: 0x80 }
+  - { offsetInCU: 0x2FF6, offset: 0x2FF6, size: 0x8, addend: 0x0, symName: __ZNKSt3__16__lessIvvEclB8ue170006IiiEEbRKT_RKT0_, symObjAddr: 0x378, symBinAddr: 0x100003F30, symSize: 0x34 }
+...
