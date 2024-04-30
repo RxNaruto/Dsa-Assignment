@@ -54,6 +54,8 @@ int main()
     s1.push(3);
     s1.push(4);
     cout<<"The stack top is :"<<s1.stackTop();
+    s1.peek();
+    
 
  return 0;
 }
