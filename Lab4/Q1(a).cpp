@@ -19,12 +19,14 @@ class stack{
         }
         top++;
         arr[top]=x;
+        cout<<"The element "<<arr[top]<<" is pushed to stack"<<endl;
     }
     void pop(){
         if(top==-1){
             cout<<"The stack is already Empty"<<endl;
         }
         top--;
+        cout<<"The element "<<arr[top+1]<<" is poped from the stack"<<endl;
     }
     bool isFull(){
         if(top==(n-1)){
@@ -53,8 +55,10 @@ int main()
     s1.push(2);
     s1.push(3);
     s1.push(4);
-    cout<<"The stack top is :"<<s1.stackTop();
-    s1.peek();
+    s1.pop();
+    s1.pop();
+    s1.pop();
+    cout<<"The stack top is :"<<s1.stackTop()<<endl;
     
 
  return 0;

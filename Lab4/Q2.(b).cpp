@@ -1,43 +1,48 @@
 #include <iostream>
 using namespace std;
+struct StackNode {
+    int data;
+    StackNode* next;
+};
+
 struct Stack {
-    static const int MAX_SIZE = 100;
-    int items[MAX_SIZE];
-    int top;
+    StackNode* top;
     Stack() {
-        top = -1; 
+        top = nullptr; 
     }
     void push(int value) {
-        if (isFull()) {
-            cout << "Stack is full"<<endl;
-            return;
-        }
-        items[++top] = value;
-        cout<<"The element "<<items[top]<<" pushed to stack"<<endl;
+        StackNode* newNode = new StackNode;
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
+        cout << value << " pushed to the stack.\n";
     }
     int pop() {
         if (isEmpty()) {
-            cout << "Stack is empty"<<endl;
-            return -1;
+            cout << "Stack Underflow!\n";
+            return -1; 
         }
-        int poppedValue = items[top--];
+        int poppedValue = top->data;
+        StackNode* temp = top;
+        top = top->next;
+        delete temp;
         return poppedValue;
     }
     bool isEmpty() {
-        return top < 0;
+        return top == nullptr;
     }
     bool isFull() {
-        return top >= MAX_SIZE - 1;
+        return false;
     }
     int peek() {
         if (isEmpty()) {
             cout << "Stack is empty.\n";
             return -1;
         }
-        return items[top];
+        return top->data;
     }
     int stackTop() {
-        return top;
+        return -1;
     }
 };
 
@@ -49,12 +54,11 @@ int main() {
 
     cout << "Top element: " << stack.peek() << endl;
 
-    cout << stack.pop() << " popped from the stack"<<endl;
+    cout << stack.pop() << " popped from the stack.\n";
     cout << "Top element: " << stack.peek() << endl;
 
     cout << "Is stack empty? " << (stack.isEmpty() ? "Yes" : "No") << endl;
     cout << "Is stack full? " << (stack.isFull() ? "Yes" : "No") << endl;
-    cout << "Index of stack top: " << stack.stackTop() << endl;
 
     return 0;
 }
